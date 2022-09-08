@@ -63,7 +63,7 @@ ALTER TABLE public.elements OWNER TO freecodecamp;
 CREATE TABLE public.properties (
     atomic_number integer NOT NULL,
     type character varying(30),
-    atomic_mass numeric(6,4) NOT NULL,
+    atomic_mass numeric NOT NULL,
     melting_point_celsius numeric NOT NULL,
     boiling_point_celsius numeric NOT NULL,
     type_id integer NOT NULL
@@ -126,21 +126,25 @@ INSERT INTO public.elements VALUES (8, 'O', 'Oxygen');
 INSERT INTO public.elements VALUES (2, 'He', 'Helium');
 INSERT INTO public.elements VALUES (3, 'Li', 'Lithium');
 INSERT INTO public.elements VALUES (1000, 'MT', 'moTanium');
+INSERT INTO public.elements VALUES (9, 'F', 'Fluorine');
+INSERT INTO public.elements VALUES (10, 'Ne', 'Neon');
 
 
 --
 -- Data for Name: properties; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.properties VALUES (1, 'nonmetal', 1.0080, -259.1, -252.9, 1);
-INSERT INTO public.properties VALUES (2, 'nonmetal', 4.0026, -272.2, -269, 1);
-INSERT INTO public.properties VALUES (6, 'nonmetal', 12.0110, 3550, 4027, 1);
-INSERT INTO public.properties VALUES (7, 'nonmetal', 14.0070, -210.1, -195.8, 1);
-INSERT INTO public.properties VALUES (8, 'nonmetal', 15.9990, -218, -183, 1);
-INSERT INTO public.properties VALUES (3, 'metal', 6.9400, 180.54, 1342, 2);
-INSERT INTO public.properties VALUES (4, 'metal', 9.0122, 1287, 2470, 2);
-INSERT INTO public.properties VALUES (5, 'metalloid', 10.8100, 2075, 4000, 3);
-INSERT INTO public.properties VALUES (1000, 'metalloid', 1.0000, 10, 100, 3);
+INSERT INTO public.properties VALUES (1, 'nonmetal', 1.01, -259.1, -252.9, 1);
+INSERT INTO public.properties VALUES (2, 'nonmetal', 4, -272.2, -269, 1);
+INSERT INTO public.properties VALUES (6, 'nonmetal', 12.01, 3550, 4027, 1);
+INSERT INTO public.properties VALUES (7, 'nonmetal', 14.01, -210.1, -195.8, 1);
+INSERT INTO public.properties VALUES (8, 'nonmetal', 16, -218, -183, 1);
+INSERT INTO public.properties VALUES (3, 'metal', 6.94, 180.54, 1342, 2);
+INSERT INTO public.properties VALUES (4, 'metal', 9.01, 1287, 2470, 2);
+INSERT INTO public.properties VALUES (5, 'metalloid', 10.81, 2075, 4000, 3);
+INSERT INTO public.properties VALUES (1000, 'metalloid', 1, 10, 100, 3);
+INSERT INTO public.properties VALUES (9, NULL, 18.998, -220, -188.1, 1);
+INSERT INTO public.properties VALUES (10, NULL, 20.18, -248.6, -246.1, 1);
 
 
 --
